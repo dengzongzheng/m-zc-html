@@ -1,6 +1,6 @@
 import WebsiteIndex from '@pages/website/index/index';
 import WebsiteDetail from '@pages/website/detail/detail';
-import WebsiteList from '@pages/website/list/list';
+import List from '@pages/website/list/list';
 import About from '@pages/website/about/about';
 const routers = [
     {
@@ -19,9 +19,24 @@ const routers = [
         component:WebsiteDetail
     },
     {
-        path:'/list',
+        path:'/others',
         exact:true,
-        component:WebsiteList
+        component:List
+    },
+    {
+        path:'/pictures',
+        exact:true,
+        component:List
+    },
+    {
+        path:'/porcelains',
+        exact:true,
+        component:List
+    },
+    {
+        path:'/jades',
+        exact:true,
+        component:List
     },
     {
         path:'/about',

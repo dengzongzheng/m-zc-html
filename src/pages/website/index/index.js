@@ -115,7 +115,7 @@ export default class Index extends Component{
                 <Flex wrap="wrap">
                     <div className="content-header">
                         <span className="head-line"/><label>磁器</label>
-                        <Link to={{pathname:"/list",state: {category:1}}}>更多磁器</Link>
+                        <Link to={{pathname:"/porcelains",state: {category:1}}}>更多磁器</Link>
                     </div>
                     <RenderGoods goods={jades}/>
                 </Flex>
@@ -123,7 +123,7 @@ export default class Index extends Component{
                 <Flex wrap="wrap">
                     <div className="content-header">
                         <span className="head-line"/><label>玉器</label>
-                        <Link to={{pathname:"/list",state: {category:2}}}>更多玉器</Link>
+                        <Link to={{pathname:"/jades",state: {category:2}}}>更多玉器</Link>
                     </div>
                     <RenderGoods goods={porcelains}/>
                 </Flex>
@@ -131,7 +131,7 @@ export default class Index extends Component{
                 <Flex wrap="wrap">
                     <div className="content-header">
                         <span className="head-line"/><label>书画</label>
-                        <Link to={{pathname:"/list",state: {category:3}}}>更多书画</Link>
+                        <Link to={{pathname:"/pictures",state: {category:3}}}>更多书画</Link>
                     </div>
                     <RenderGoods goods={pictures}/>
                 </Flex>
@@ -139,7 +139,7 @@ export default class Index extends Component{
                 <Flex wrap="wrap">
                     <div className="content-header">
                         <span className="head-line"/><label>杂项</label>
-                        <Link to={{pathname:"/list",state: {category:4}}}>更多杂项</Link>
+                        <Link to={{pathname:"/others",state: {category:4}}}>更多杂项</Link>
                     </div>
                     <RenderGoods goods={others}/>
                 </Flex>
