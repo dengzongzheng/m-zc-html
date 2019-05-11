@@ -1,7 +1,7 @@
 import React,{ Component } from 'react';
 import {Redirect,Link} from 'react-router-dom';
 import './index.css';
-import { Carousel, WingBlank,WhiteSpace,Flex } from 'antd-mobile';
+import { Carousel, WingBlank,WhiteSpace,Flex,Grid } from 'antd-mobile';
 import {imgPath} from "@/service/xhr/config";
 import xhr from '@/service/xhr/index';
 import Footer from "@/components/footer/footer";
@@ -105,43 +105,116 @@ export default class Index extends Component{
                     {swappers}
                 </Carousel>
 
-                <Flex wrap="wrap">
-                    <div className="content-header no-top-border">
-                        <span className="head-line"/><label>重点推荐</label>
-                    </div>
-                    <RenderGoods goods={recommended}/>
-                </Flex>
+                <div className="content-header no-top-border">
+                    <span className="head-line"/><label>重点推荐</label>
+                </div>
+                <Grid data={recommended}
+                      hasLine={false}
+                      columnNum={2}
+                      renderItem={item => (
+                          <Link to={{pathname:'/detail',state:{productNo:item.productNo}}} key={item.productNo}>
+                              <div style={{ padding: '12.5px' }}>
+                                  <img src={imgPath+item.productImages[0]}
+                                       style={{ width: '75px', height: '75px' }} alt={title} />
+                                  <div style={{ color: '#888', fontSize: '14px'}}>
+                                      <div className="title">{item.productName}</div>
+                                      <div className="sub-title">{item.direction}</div>
+                                      <div className="goods-date">{item.updateDate}</div>
+                                  </div>
+                              </div>
+                          </Link>
+                      )}
+                />
 
-                <Flex wrap="wrap">
-                    <div className="content-header">
-                        <span className="head-line"/><label>磁器</label>
-                        <Link to={{pathname:"/porcelains",state: {category:1}}}>更多磁器</Link>
-                    </div>
-                    <RenderGoods goods={jades}/>
-                </Flex>
+                <div className="content-header">
+                    <span className="head-line"/><label>磁器</label>
+                    <Link to={{pathname:"/porcelains",state: {category:1}}}>更多磁器</Link>
+                </div>
+                <Grid data={jades}
+                      hasLine={false}
+                      columnNum={2}
+                      renderItem={item => (
+                          <Link to={{pathname:'/detail',state:{productNo:item.productNo}}} key={item.productNo}>
+                              <div style={{ padding: '12.5px' }}>
+                                  <img src={imgPath+item.productImages[0]}
+                                       style={{ width: '75px', height: '75px' }} alt={title} />
+                                  <div style={{ color: '#888', fontSize: '14px'}}>
+                                      <div className="title">{item.productName}</div>
+                                      <div className="sub-title">{item.direction}</div>
+                                      <div className="goods-date">{item.updateDate}</div>
+                                  </div>
+                              </div>
+                          </Link>
+                      )}
+                />
 
-                <Flex wrap="wrap">
-                    <div className="content-header">
-                        <span className="head-line"/><label>玉器</label>
-                        <Link to={{pathname:"/jades",state: {category:2}}}>更多玉器</Link>
-                    </div>
-                    <RenderGoods goods={porcelains}/>
-                </Flex>
+                <div className="content-header">
+                    <span className="head-line"/><label>玉器</label>
+                    <Link to={{pathname:"/jades",state: {category:2}}}>更多玉器</Link>
+                </div>
+                <Grid data={porcelains}
+                      hasLine={false}
+                      columnNum={2}
+                      renderItem={item => (
+                          <Link to={{pathname:'/detail',state:{productNo:item.productNo}}} key={item.productNo}>
+                              <div style={{ padding: '12.5px' }}>
+                                  <img src={imgPath+item.productImages[0]}
+                                       style={{ width: '75px', height: '75px' }} alt={title} />
+                                  <div style={{ color: '#888', fontSize: '14px'}}>
+                                      <div className="title">{item.productName}</div>
+                                      <div className="sub-title">{item.direction}</div>
+                                      <div className="goods-date">{item.updateDate}</div>
+                                  </div>
+                              </div>
+                          </Link>
+                      )}
+                />
 
-                <Flex wrap="wrap">
-                    <div className="content-header">
-                        <span className="head-line"/><label>书画</label>
-                        <Link to={{pathname:"/pictures",state: {category:3}}}>更多书画</Link>
-                    </div>
-                    <RenderGoods goods={pictures}/>
-                </Flex>
+                <div className="content-header">
+                    <span className="head-line"/><label>书画</label>
+                    <Link to={{pathname:"/pictures",state: {category:3}}}>更多书画</Link>
+                </div>
+                <Grid data={pictures}
+                      hasLine={false}
+                      columnNum={2}
+                      renderItem={item => (
+                          <Link to={{pathname:'/detail',state:{productNo:item.productNo}}} key={item.productNo}>
+                              <div style={{ padding: '12.5px' }}>
+                                  <img src={imgPath+item.productImages[0]}
+                                       style={{ width: '75px', height: '75px' }} alt={title} />
+                                  <div style={{ color: '#888', fontSize: '14px'}}>
+                                      <div className="title">{item.productName}</div>
+                                      <div className="sub-title">{item.direction}</div>
+                                      <div className="goods-date">{item.updateDate}</div>
+                                  </div>
+                              </div>
+                          </Link>
+                      )}
+                />
 
+                <div className="content-header">
+                    <span className="head-line"/><label>杂项</label>
+                    <Link to={{pathname:"/others",state: {category:4}}}>更多杂项</Link>
+                </div>
+                <Grid data={others}
+                      hasLine={false}
+                      columnNum={2}
+                      renderItem={item => (
+                          <Link to={{pathname:'/detail',state:{productNo:item.productNo}}} key={item.productNo}>
+                              <div style={{ padding: '12.5px' }}>
+                                  <img src={imgPath+item.productImages[0]}
+                                       style={{ width: '75px', height: '75px' }} alt={title} />
+                                  <div style={{ color: '#888', fontSize: '14px'}}>
+                                      <div className="title">{item.productName}</div>
+                                      <div className="sub-title">{item.direction}</div>
+                                      <div className="goods-date">{item.updateDate}</div>
+                                  </div>
+                              </div>
+                          </Link>
+                      )}
+                />
                 <Flex wrap="wrap">
-                    <div className="content-header">
-                        <span className="head-line"/><label>杂项</label>
-                        <Link to={{pathname:"/others",state: {category:4}}}>更多杂项</Link>
-                    </div>
-                    <RenderGoods goods={others}/>
+
                 </Flex>
                 <Footer/>
             </div>

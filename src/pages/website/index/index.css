@@ -101,6 +101,7 @@
     width: 100%;
     border-top: 2px solid #dd4444;
     line-height: 5px;
+    text-align: left;
 }
 
 .no-top-border{
@@ -108,7 +109,7 @@
 }
 
 .content-header label{
-    font-size: 24px;
+    font-size: 18px;
     color: #444;
 }
 

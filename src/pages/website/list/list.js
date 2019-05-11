@@ -5,28 +5,8 @@ import Footer from '@components/footer/footer';
 import {imgPath} from "@/service/xhr/config";
 import xhr from '@/service/xhr/index';
 import {categories} from '@/constant/index';
-import { Pagination, Icon } from 'antd-mobile';
-
-function RenderGoods(props){
-    const goods = props.goods;
-    const items = goods.map((item)=>
-        <Link to={{pathname:'/detail',state:{productNo:item.productNo}}} key={item.productNo}>
-            <div className="goods">
-                <div className="img-box">
-                    <img src={imgPath+item.productImages[0]} className="goods-img" alt=""/>
-                </div>
-                <div className="title">{item.productName}</div>
-                <div className="sub-title">{item.direction}</div>
-                <div className="goods-date">2019-05-10</div>
-            </div>
-        </Link>
-    );
-    return(
-        <div className="content-list">
-            {items}
-        </div>
-    )
-}
+import { Pagination, Icon,Grid } from 'antd-mobile';
+import {title} from '@/constant/index';
 
 export default class List extends Component{
     constructor(props){
@@ -109,7 +89,23 @@ export default class List extends Component{
                         <div className="content-header">
                             <span className="head-line"/><label>{categoryName}</label>
                         </div>
-                        <RenderGoods goods={list}></RenderGoods>
+                        <Grid data={list}
+                              hasLine={false}
+                              columnNum={2}
+                              renderItem={item => (
+                                  <Link to={{pathname:'/detail',state:{productNo:item.productNo}}} key={item.productNo}>
+                                      <div style={{ padding: '12.5px' }}>
+                                          <img src={imgPath+item.productImages[0]}
+                                               style={{ width: '75px', height: '75px' }} alt={title} />
+                                          <div style={{ color: '#888', fontSize: '14px'}}>
+                                              <div className="title">{item.productName}</div>
+                                              <div className="sub-title">{item.direction}</div>
+                                              <div className="goods-date">{item.updateDate}</div>
+                                          </div>
+                                      </div>
+                                  </Link>
+                              )}
+                        />
                     </div>
                     <hr className="hr" />
                     <Pagination total={this.state.totalPages}
