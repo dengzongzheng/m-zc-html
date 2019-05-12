@@ -106,6 +106,7 @@ export default class Index extends Component{
 
                 <div className="content-header no-top-border">
                     <span className="head-line"/><label>重点推荐</label>
+                    <Link to={{pathname:"/recommended",state: {category:5}}}>更多重点推荐</Link>
                 </div>
                 <Grid data={recommended}
                       hasLine={false}

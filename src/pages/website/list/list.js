@@ -44,14 +44,12 @@ export default class List extends Component{
 
     }
 
-    pageChange(page, pageSize){
-        let param = this.state.param;
-        param["pageNo"] = page;
-        param["pageSize"] = pageSize;
-        this.setState(state=>({
-            param:param
-        }));
-        this.listCategory();
+    pageChange(e){
+        const pageNo = e;
+        const that = this;
+        this.setState({pageNo: pageNo}, () => (
+            that.listCategory()
+        ));
     }
 
     listCategory(){
@@ -61,7 +59,6 @@ export default class List extends Component{
         param["categoryCode"] = this.state.categoryCode;
         const that = this;
         xhr.get('/api/listCategory',param).then(function (data) {
-            console.log(data);
             if(data.code==="1"){
                 that.setState(state=>({
                     list: data.data.data,
@@ -115,7 +112,7 @@ export default class List extends Component{
                                     prevText: (<span className="arrow-align"><Icon type="left" />上一页</span>),
                                     nextText: (<span className="arrow-align">下一页<Icon type="right" /></span>),
                                 }}
-                                onChange={(page,pageSize)=>this.pageChange(page,pageSize)}
+                                onChange={(e)=>this.pageChange(e)}
                     />
                     <Footer/>
                 </div>

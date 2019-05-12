@@ -39,6 +39,11 @@ const routers = [
         component:List
     },
     {
+        path:'/recommended',
+        exact:true,
+        component:List
+    },
+    {
         path:'/about',
         exact:true,
         component:About
