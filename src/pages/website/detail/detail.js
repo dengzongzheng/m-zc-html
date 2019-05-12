@@ -79,7 +79,6 @@ export default class WebsiteDetail extends Component{
                         <div className="detail-title">{goods.productName}</div>
                         <div className="desc">{goods.direction}</div>
                         <div className="visit">阅览量：{goods.visitCount}</div>
-                        <div className="detail-goods-date">更新时间：{goods.updateDate}</div>
                     </div>
                 </div>
             </div>

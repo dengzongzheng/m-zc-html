@@ -17,7 +17,6 @@ function RenderGoods(props){
                 </div>
                 <div className="title">{item.productName}</div>
                 <div className="sub-title">{item.direction}</div>
-                <div className="goods-date">{item.updateDate}</div>
             </div>
         </Link>
     );
@@ -119,7 +118,6 @@ export default class Index extends Component{
                                   <div style={{ color: '#888', fontSize: '14px'}}>
                                       <div className="title">{item.productName}</div>
                                       <div className="sub-title">{item.direction}</div>
-                                      <div className="goods-date">{item.updateDate}</div>
                                   </div>
                               </div>
                           </Link>
@@ -127,30 +125,8 @@ export default class Index extends Component{
                 />
 
                 <div className="content-header">
-                    <span className="head-line"/><label>磁器</label>
-                    <Link to={{pathname:"/porcelains",state: {category:1}}}>更多磁器</Link>
-                </div>
-                <Grid data={jades}
-                      hasLine={false}
-                      columnNum={2}
-                      renderItem={item => (
-                          <Link to={{pathname:'/detail',state:{productNo:item.productNo}}} key={item.productNo}>
-                              <div style={{ padding: '12.5px' }}>
-                                  <img src={imgPath+item.productImages[0]}
-                                       style={{ width: '75px', height: '75px' }} alt={title} />
-                                  <div style={{ color: '#888', fontSize: '14px'}}>
-                                      <div className="title">{item.productName}</div>
-                                      <div className="sub-title">{item.direction}</div>
-                                      <div className="goods-date">{item.updateDate}</div>
-                                  </div>
-                              </div>
-                          </Link>
-                      )}
-                />
-
-                <div className="content-header">
-                    <span className="head-line"/><label>玉器</label>
-                    <Link to={{pathname:"/jades",state: {category:2}}}>更多玉器</Link>
+                    <span className="head-line"/><label>瓷器</label>
+                    <Link to={{pathname:"/porcelains",state: {category:1}}}>更多瓷器</Link>
                 </div>
                 <Grid data={porcelains}
                       hasLine={false}
@@ -163,7 +139,27 @@ export default class Index extends Component{
                                   <div style={{ color: '#888', fontSize: '14px'}}>
                                       <div className="title">{item.productName}</div>
                                       <div className="sub-title">{item.direction}</div>
-                                      <div className="goods-date">{item.updateDate}</div>
+                                  </div>
+                              </div>
+                          </Link>
+                      )}
+                />
+
+                <div className="content-header">
+                    <span className="head-line"/><label>玉器</label>
+                    <Link to={{pathname:"/jades",state: {category:2}}}>更多玉器</Link>
+                </div>
+                <Grid data={jades}
+                      hasLine={false}
+                      columnNum={2}
+                      renderItem={item => (
+                          <Link to={{pathname:'/detail',state:{productNo:item.productNo}}} key={item.productNo}>
+                              <div style={{ padding: '12.5px' }}>
+                                  <img src={imgPath+item.productImages[0]}
+                                       style={{ width: '75px', height: '75px' }} alt={title} />
+                                  <div style={{ color: '#888', fontSize: '14px'}}>
+                                      <div className="title">{item.productName}</div>
+                                      <div className="sub-title">{item.direction}</div>
                                   </div>
                               </div>
                           </Link>
@@ -185,7 +181,6 @@ export default class Index extends Component{
                                   <div style={{ color: '#888', fontSize: '14px'}}>
                                       <div className="title">{item.productName}</div>
                                       <div className="sub-title">{item.direction}</div>
-                                      <div className="goods-date">{item.updateDate}</div>
                                   </div>
                               </div>
                           </Link>
@@ -207,7 +202,6 @@ export default class Index extends Component{
                                   <div style={{ color: '#888', fontSize: '14px'}}>
                                       <div className="title">{item.productName}</div>
                                       <div className="sub-title">{item.direction}</div>
-                                      <div className="goods-date">{item.updateDate}</div>
                                   </div>
                               </div>
                           </Link>

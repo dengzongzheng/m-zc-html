@@ -52,6 +52,7 @@ class App extends Component {
 
     render() {
         const sidebar = (<ul className={"ul-box"}>
+            <li><Link onClick={() => this.onOpenChange()} to="/"><img className={"logo-img"} src={require('./assets/images/logo.png')}/></Link></li>
             <li><Link onClick={() => this.onOpenChange()} to="/">首页</Link></li>
             <li><Link onClick={() => this.onOpenChange()} to={{pathname:"/porcelains",state: {category:1}}}>磁器</Link></li>
             <li><Link onClick={() => this.onOpenChange()} to={{pathname:"/jades",state: {category:2}}}>玉器</Link></li>

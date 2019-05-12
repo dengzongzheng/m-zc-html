@@ -1,6 +1,6 @@
 .detail-box{
     margin: 42px 132px;
-    background: white;
+    background: #F4F0ED;
     text-align: left;
 }
 
@@ -8,7 +8,7 @@
     text-align: left;
     margin: 30px auto;
     width: 80%;
-    background: white;
+    /*background: white;*/
 }
 
 .left-box{

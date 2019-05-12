@@ -1,10 +1,13 @@
 body {
     padding: 0;
     margin: 0;
-    background: #fff;
+    background: #F4F0ED;
     padding-inline-start: 0px !important;
     font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
     font-size: 12px;
+    background-image: url(../../assets/images/bg.png);
+    background-repeat: repeat-y;
+    background-size: cover;
 }
 
 a{
@@ -65,4 +68,9 @@ html, body {
     background: #e44;
     border: none;
     height: 1px;
+}
+
+.logo-img {
+    width: 50px;
+    height: 50px;
 }
