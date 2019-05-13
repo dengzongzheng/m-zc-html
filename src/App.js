@@ -59,6 +59,7 @@ class App extends Component {
             <li><Link onClick={() => this.onOpenChange()} to={{pathname:"/pictures",state: {category:3}}}>书画</Link></li>
             <li><Link onClick={() => this.onOpenChange()} to={{pathname:"/others",state: {category:4}}}>杂项</Link></li>
             <li><Link onClick={() => this.onOpenChange()} to="/about">联系我们</Link></li>
+            <li><Link onClick={() => this.onOpenChange()} to="/us">关于我们</Link></li>
         </ul>);
         return (
                 <div className="App">

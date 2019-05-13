@@ -2,6 +2,7 @@ import WebsiteIndex from '@pages/website/index/index';
 import WebsiteDetail from '@pages/website/detail/detail';
 import List from '@pages/website/list/list';
 import About from '@pages/website/about/about';
+import Us from '@pages/website/us/us';
 const routers = [
     {
         path:'/',
@@ -47,6 +48,11 @@ const routers = [
         path:'/about',
         exact:true,
         component:About
+    },
+    {
+        path:'/us',
+        exact:true,
+        component:Us
     }
 ];
 
