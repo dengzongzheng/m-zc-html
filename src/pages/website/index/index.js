@@ -119,6 +119,7 @@ export default class Index extends Component{
                                   <div style={{ color: '#888', fontSize: '14px'}}>
                                       <div className="title">{item.productName}</div>
                                       <div className="sub-title">{item.direction}</div>
+                                      <div className="sub-price">价格:{item.price}</div>
                                   </div>
                               </div>
                           </Link>
@@ -140,6 +141,7 @@ export default class Index extends Component{
                                   <div style={{ color: '#888', fontSize: '14px'}}>
                                       <div className="title">{item.productName}</div>
                                       <div className="sub-title">{item.direction}</div>
+                                      <div className="sub-price">价格:{item.price}</div>
                                   </div>
                               </div>
                           </Link>
@@ -161,6 +163,7 @@ export default class Index extends Component{
                                   <div style={{ color: '#888', fontSize: '14px'}}>
                                       <div className="title">{item.productName}</div>
                                       <div className="sub-title">{item.direction}</div>
+                                      <div className="sub-price">价格:{item.price}</div>
                                   </div>
                               </div>
                           </Link>
@@ -182,6 +185,7 @@ export default class Index extends Component{
                                   <div style={{ color: '#888', fontSize: '14px'}}>
                                       <div className="title">{item.productName}</div>
                                       <div className="sub-title">{item.direction}</div>
+                                      <div className="sub-price">价格:{item.price}</div>
                                   </div>
                               </div>
                           </Link>
@@ -203,6 +207,7 @@ export default class Index extends Component{
                                   <div style={{ color: '#888', fontSize: '14px'}}>
                                       <div className="title">{item.productName}</div>
                                       <div className="sub-title">{item.direction}</div>
+                                      <div className="sub-price">价格:{item.price}</div>
                                   </div>
                               </div>
                           </Link>

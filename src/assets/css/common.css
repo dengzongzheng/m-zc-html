@@ -78,3 +78,10 @@ html, body {
     height: 50px;
     padding-top: 12.5px;
 }
+
+.sub-price {
+    color: red;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 38px;
+}
