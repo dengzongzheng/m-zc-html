@@ -67,8 +67,7 @@ module.exports = {
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
             title: '管理输出',
-            template: path.resolve(__dirname, '../src/index.html'),
-            favicon: path.resolve(__dirname, '../src/assets/images/favicon.ico')
+            template: path.resolve(__dirname, '../src/index.html')
         }),
     ]
 };

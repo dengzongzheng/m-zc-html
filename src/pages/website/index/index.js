@@ -31,7 +31,7 @@ export default class Index extends Component{
     constructor(props){
         super(props);
         this.state = {
-            swappers: ['swaper1.jpg', 'swaper2.jpg'],
+            swappers: [ 'swaper2.jpg'],
             imgHeight: 176,
             jades:[
 

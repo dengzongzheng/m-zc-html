@@ -52,14 +52,14 @@ class App extends Component {
 
     render() {
         const sidebar = (<ul className={"ul-box"}>
-            <li><Link onClick={() => this.onOpenChange()} to="/"><img className={"logo-img"} src={require('./assets/images/logo.png')}/></Link></li>
+            {/*<li><Link onClick={() => this.onOpenChange()} to="/"><img className={"logo-img"} src={require('./assets/images/logo.png')}/></Link></li>*/}
             <li><Link onClick={() => this.onOpenChange()} to="/">首页</Link></li>
             <li><Link onClick={() => this.onOpenChange()} to={{pathname:"/porcelains",state: {category:1}}}>磁器</Link></li>
             <li><Link onClick={() => this.onOpenChange()} to={{pathname:"/jades",state: {category:2}}}>玉器</Link></li>
             <li><Link onClick={() => this.onOpenChange()} to={{pathname:"/pictures",state: {category:3}}}>书画</Link></li>
             <li><Link onClick={() => this.onOpenChange()} to={{pathname:"/others",state: {category:4}}}>杂项</Link></li>
             <li><Link onClick={() => this.onOpenChange()} to="/about">联系我们</Link></li>
-            <li><Link onClick={() => this.onOpenChange()} to="/us">关于我们</Link></li>
+            {/*<li><Link onClick={() => this.onOpenChange()} to="/us">关于我们</Link></li>*/}
         </ul>);
         return (
                 <div className="App">
